@@ -1,0 +1,21 @@
+model_type: purrception
+backbone_type: dit
+backbone_args:
+  input_size: 32
+  patch_size: 2
+  in_channels: 8
+  hidden_size: 768
+  depth: 12
+  num_heads: 12
+  mlp_ratio: 4
+  num_classes: 1000
+autoencoder_args:
+  autoencoder_type: llamagen
+  autoencoder_checkpoint_path: autoencoders/vq_ds8_c2i.pt
+  autoencoder_config_path: none
+sampler_args:
+  total_number_samples: 10000
+  batch_size_per_gpu: 50
+  ode_method: euler
+  ode_steps: 100
+  cfg_scale: 1.0

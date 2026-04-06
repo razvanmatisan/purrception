@@ -1,0 +1,21 @@
+model_type: cfm-endpoint
+backbone_type: dit
+backbone_args:
+  input_size: 32
+  patch_size: 2
+  in_channels: 4
+  hidden_size: 1024
+  depth: 24
+  num_heads: 16
+  mlp_ratio: 4
+  num_classes: 1000
+autoencoder_args:
+  autoencoder_type: stablediffusion
+  autoencoder_checkpoint_path: autoencoders/vq-f8.ckpt
+  autoencoder_config_path: latent_diffusion/models/first_stage_models/vq-f8/config.yaml
+sampler_args:
+  total_number_samples: 10000
+  batch_size_per_gpu: 50
+  ode_method: euler
+  ode_steps: 100
+  cfg_scale: 1.0
