@@ -1,0 +1,10 @@
+[project]
+name = "vq_catflow"
+requires-python = "==3.11"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+exclude = ["latent_diffusion/**"]

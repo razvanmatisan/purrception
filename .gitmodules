@@ -1,0 +1,3 @@
+[submodule "LlamaGen"]
+	path = LlamaGen
+	url = git@github.com:FoundationVision/LlamaGen.git
