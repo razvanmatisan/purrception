@@ -153,8 +153,6 @@ sampler_args:
 
 </details>
 
----
-
 ### 🌊 Sampling and FID
 
 **Batch sampling + optional FID:** use **`sample_checkpoints.py`**. It loads the same style of YAML as training (`model_type`, `backbone_args`, `autoencoder_args`, **`sampler_args`** for evaluation). It loads the VQ and DiT, optionally steps through **multiple checkpoints** derived from `--base_path` and `--steps`, generates images, writes them under `--samples_path`, and can compute FID against a local reference folder. Matching configs live under **`configs/examples/sample/`** (same naming pattern as training: objective, DiT size, tokenizer).
@@ -206,7 +204,7 @@ torchrun --nproc_per_node=NUM_GPUS sample_checkpoints.py \
 In case you find this repository useful, please cite our paper:
 
 ```
-@article{maticsan2025purrception,
+@article{matisan2025purrception,
   title={Purrception: Variational Flow Matching for Vector-Quantized Image Generation},
   author={Mati{\c{s}}an, R{\u{a}}zvan-Andrei and Hu, Vincent Tao and Bartosh, Grigory and Ommer, Bj{\"o}rn and Snoek, Cees GM and Welling, Max and van de Meent, Jan-Willem and Derakhshani, Mohammad Mahdi and Eijkelboom, Floor},
   journal={arXiv preprint arXiv:2510.01478},
